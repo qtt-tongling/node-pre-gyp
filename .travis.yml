@@ -1,0 +1,7 @@
+pipeline:
+  build:
+    image: motecshine/laravelphp71
+    commands:
+    - mv $(pwd)/.env.dev $(pwd)/.env
+    - composer config repo.packagist composer https://packagist.phpcomposer.com
+    - composer install --no-scripts --no-dev
